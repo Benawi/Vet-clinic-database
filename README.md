@@ -33,8 +33,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - Use [schema.sql](./schema.sql) to create all tables.
 - Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. 
 ## 🛠 Built With <a name="built-with"></a>
 
 ## Tech Stack <a name="tech-stack"></a>
@@ -61,7 +60,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [x] birth_date - Date of birth of the animal This covers some essential columns for an animals table. 
 - [x] weight - Decimal indicating the weight
 allergies - Varchar column for any known allergies
-- [x] All queries tested and [works all](#)
+- [x] All queries tested and [works all](https://github-production-user-asset-6210df.s3.amazonaws.com/21217148/254047468-22bbbdb4-ba89-413d-a4cd-fde071c53ddf.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,10 +73,10 @@ allergies - Varchar column for any known allergies
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- query and update animals table.
-- query multiple tables.
-- add "join table" for visits.
-- database performance audit.💯
+- Query and update the animals table.
+- Query multiple tables.
+- Add "join table" for visits.
+- Database performance audit.💯
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
