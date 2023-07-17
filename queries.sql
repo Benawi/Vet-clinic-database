@@ -1,4 +1,4 @@
-/*Queries that provide answers to the questions from all projects.*/
+/*Queries that applied in the animals table.*/
 
 /* Find all animals whose name ends in "mon". */
 SELECT * FROM animals WHERE name LIKE '%mon';
@@ -20,3 +20,6 @@ SELECT *  FROM animals WHERE neutered IS true;
 
 /* Find all animals not named Gabumon. */
 SELECT *  FROM animals WHERE name NOT IN ('Gabumon');
+
+/* Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg) */
+SELECT *  FROM animals WHERE weigth_kg BETWEEN 10.4 and 17.3;
