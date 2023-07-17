@@ -14,3 +14,6 @@ SELECT date_of_birth as "Date of Birth" FROM animals WHERE name IN ('Agumon', 'P
 
 /* List name and escape attempts of animals that weigh more than 10.5kg */
 SELECT name, escape_attempts as "Escape attempts" FROM animals WHERE weight_kg > 10.5;
+
+/* Find all animals that are neutered. */
+SELECT *  FROM animals WHERE neutered IS true;
