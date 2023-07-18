@@ -48,3 +48,8 @@ SELECT  * FROM animals;
 /*Commit the transaction. and Verify that changes persist after commit.  */
 COMMIT;
 SELECT   * FROM animals;
+
+/* Inside a transaction delete all records in the animals table, then roll back the transaction. */
+BEGIN;
+DELETE FROM animals;
+ROLLBACK;
