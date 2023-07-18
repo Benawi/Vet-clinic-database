@@ -79,3 +79,7 @@ SELECT   * FROM animals;
 
 /* How many animals are there? */
 SELECT  COUNT(*) as "Animals" FROM animals;
+
+/* How many animals have never tried to escape? */
+SELECT  COUNT(*) as "Animals" FROM animals WHERE escape_attempts = 0;
+
