@@ -16,7 +16,13 @@ ADD COLUMN species VARCHAR(100);
 /* Create a table named owners */
 CREATE TABLE owners (
   id INT GENERATED ALWAYS AS IDENTITY,
-  full_name varchar(80) NOT NULL,
+  full_name varchar(100) NOT NULL,
   age INT NOT NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE species (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name varchar(100) NOT NULL,
   PRIMARY KEY(id)
 );
