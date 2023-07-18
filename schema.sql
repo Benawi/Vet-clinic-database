@@ -30,3 +30,12 @@ CREATE TABLE species (
 
 /* Remove column species */
  ALTER TABLE animals DROP COLUMN species;
+
+/*Add column owner_id which is a foreign key referencing the owners table */
+ALTER TABLE animals
+ADD species_id INT,
+ADD  owner_id INT,
+ADD  CONSTRAINT fk_species
+FOREIGN KEY(species_id)
+REFERENCES species(id)
+ON DELETE CASCADE,
