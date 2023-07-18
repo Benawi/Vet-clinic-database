@@ -60,13 +60,19 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [x] Demonstrates BEGIN TRANSACTION, COMMIT, and ROLLBACK
 - [x] Allows verifying changes before committing
 - [x] Demonstrates deleting subsets of rows
-
 - [x] Creates a savepoint within a transaction
 - [x] Allows rolling back to a mid-transaction savepoint
 - [x] Basic aggregation queries like COUNT, AVG, MIN, MAX functions
 - [x] Conditional filtering WHERE clause to filter result setg ,group results by a column like animal type and apply aggregates per group
-- [x] All queries tested and [works all](https://github-production-user-asset-6210df.s3.amazonaws.com/21217148/254047468-22bbbdb4-ba89-413d-a4cd-fde071c53ddf.png)
-
+- [x] `owners` table to store owner information
+- [x] `species` table to store animal species
+- [x] `animals` table to store animal data, with foreign keys linking to owners and species
+- [x] Queries implemented using SQL JOINS to answer questions like:
+  - What animals belong to an owner
+  - List animals by species
+  - List owners and their animals
+  - Count animals per species
+  - Other analytics like most owned animals
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -77,7 +83,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
 ## 🔭 Future Features <a name="future-features"></a>
-- Query multiple tables.
 - Add "join table" for visits.
 - Database performance audit.💯
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

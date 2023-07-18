@@ -21,3 +21,68 @@ INSERT INTO animals VALUES
 (default, 'Blossom', '19981013', 3, true, 17 ),
 /*  Animal: His name is Ditto. He was born on May 14th, 2022, and currently weighs 22kg. He is neutered and he has tried to escape 4 times.*/
 (default, 'Ditto', '20220614', 4, true, 22 );
+
+/* Insert the following data into the owners  */
+INSERT INTO owners(full_name, age) VALUES ('Sam Smith', 34),
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38);
+
+/* Insert the following data into the species */
+INSERT INTO species(name) VALUES ('Pokemon'),('Digimon');
+
+/* Modify inserted animals so it includes the species_id value:
+If the name ends in "mon" it will be Digimon */
+
+BEGIN;
+UPDATE animals
+SET species_id = (
+  SELECT id FROM species
+  WHERE name ='Pokemon'
+)
+WHERE name LIKE '%mon';
+COMMIT;
+
+/* Modify your inserted animals so it includes the species_id value:
+If the name not ends in "mon" it will be Digimon */
+BEGIN;
+UPDATE animals
+SET species_id = (
+  SELECT id FROM species
+  WHERE name ='Digimon'
+)
+WHERE name NOT LIKE '%mon';
+COMMIT;
+
+/* Modify your inserted animals to include owner information (owner_id) */
+BEGIN;
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Sam Smith')
+WHERE name = 'Agumon';
+COMMIT;
+
+BEGIN;
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Jennifer Orwell')
+WHERE name = 'Gabumon' OR name = 'Pikachu';
+COMMIT;
+
+BEGIN;
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Bob')
+WHERE name = 'Devimon' OR name = 'Plantmon';
+COMMIT;
+
+BEGIN;
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+COMMIT;
+
+BEGIN;
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
+WHERE name = 'Angemon'  OR name = 'Boarmon';
+COMMIT;
