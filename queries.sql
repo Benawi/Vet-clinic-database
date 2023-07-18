@@ -90,3 +90,6 @@ SELECT  AVG(weigth_kg) as "Average weigth of Animals" FROM animals;
 SELECT neutered, SUM(escape_attempts) as "Escape Attempts" FROM animals 
 GROUP BY neutered;
 
+/* What is the minimum and maximum weight of each type of animal? */
+SELECT species as "Species", MIN(weight_kg) as "Min Weight", MAX(weight_kg)as
+"Max Weight" FROM animals GROUP BY species;
