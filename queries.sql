@@ -29,3 +29,10 @@ BEGIN;
 
 UPDATE animals
 SET species = 'unspecified';
+
+/* Verify that change was made. Then roll back the change and verify that the species columns went back to the state before the transaction. */
+SELECT 
+  *
+FROM animals;
+
+ROLLBACK;
