@@ -66,4 +66,6 @@ SAVEPOINT SP1;
 
 /* Update all animals' weight to be their weight multiplied by -1. */
 UPDATE animals SET weigth_kg = weigth_kg * -1;
+/* Rollback to the savepoint */
+ROLLBACK;
 
