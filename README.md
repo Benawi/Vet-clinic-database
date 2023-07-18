@@ -55,11 +55,16 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Vet-clinic-database [Requirements](https://github.com/microverseinc/curriculum-databases/blob/main/db-structure/sneak_peek.md)
 
-- [x] id - Primary key that auto increments to provide a unique ID for each animal
-- [x] name - Name of the animal
-- [x] birth_date - Date of birth of the animal This covers some essential columns for an animals table. 
-- [x] weight - Decimal indicating the weight
-allergies - Varchar column for any known allergies
+- [x] Populate data to the table
+- [x] Transactions allow making changes in isolation and rolling back if needed
+- [x] Demonstrates BEGIN TRANSACTION, COMMIT, and ROLLBACK
+- [x] Allows verifying changes before committing
+- [x] Demonstrates deleting subsets of rows
+
+- [x] Creates a savepoint within a transaction
+- [x] Allows rolling back to a mid-transaction savepoint
+- [x] Basic aggregation queries like COUNT, AVG, MIN, MAX functions
+- [x] Conditional filtering WHERE clause to filter result setg ,group results by a column like animal type and apply aggregates per group
 - [x] All queries tested and [works all](https://github-production-user-asset-6210df.s3.amazonaws.com/21217148/254047468-22bbbdb4-ba89-413d-a4cd-fde071c53ddf.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,8 +77,6 @@ allergies - Varchar column for any known allergies
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-- Query and update the animals table.
 - Query multiple tables.
 - Add "join table" for visits.
 - Database performance audit.💯
