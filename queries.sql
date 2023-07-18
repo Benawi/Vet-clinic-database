@@ -22,7 +22,7 @@ SELECT *  FROM animals WHERE neutered IS true;
 SELECT *  FROM animals WHERE name NOT IN ('Gabumon');
 
 /* Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg) */
-SELECT *  FROM animals WHERE weigth_kg BETWEEN 10.4 and 17.3;
+SELECT *  FROM animals WHERE weight_kg BETWEEN 10.4 and 17.3;
 /* =======================================================
    ||Vet clinic database project: query and update animals table||
    ======================================================= */
@@ -67,13 +67,13 @@ BEGIN;
 SAVEPOINT SP1;
 
 /* Update all animals' weight to be their weight multiplied by -1. */
-UPDATE animals SET weigth_kg = weigth_kg * -1;
+UPDATE animals SET weight_kg = weight_kg * -1;
 /* Rollback to the savepoint */
 ROLLBACK;
 
 BEGIN;
 /* Update all animals' weights that are negative to be their weight multiplied by -1. */
-UPDATE animals SET weigth_kg = weigth_kg * -1 WHERE weigth_kg < 0;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 
 /* Commit transaction */
 COMMIT;
@@ -86,7 +86,7 @@ SELECT  COUNT(*) as "Animals" FROM animals;
 SELECT  COUNT(*) as "Animals" FROM animals WHERE escape_attempts = 0;
 
 /* What is the average weight of animals? */
-SELECT  AVG(weigth_kg) as "Average weigth of Animals" FROM animals;
+SELECT  AVG(weight_kg) as "Average weigth of Animals" FROM animals;
 
 /* Who escapes the most, neutered or not neutered animals? */
 SELECT neutered, SUM(escape_attempts) as "Escape Attempts" FROM animals 
