@@ -100,6 +100,21 @@ SELECT species as "Species", MIN(weight_kg) as "Min Weight", MAX(weight_kg)as
 SELECT species as "Species", AVG(escape_attempts) FROM animals WHERE date_of_birth
  BETWEEN '19900101' and '20000101' GROUP BY species;
 
+/* =======================================================
+   ||Vet clinic database project: query multiple table  ||
+   ======================================================= */
 /* What animals belong to Melody Pond? */
  SELECT a.name FROM animals a JOIN owners o ON a.owner_id = o.id
 WHERE o.full_name = 'Melody Pond';
+
+/* List of all animals that are pokemon (their type is Pokemon). */
+SELECT a.name
+FROM animals a 
+JOIN species s ON a.species_id = s.id
+WHERE s.name = 'Pokemon';
+
+/* List all owners and their animals, remember to include those that don't own any animal. */
+SELECT full_name as "Owner", name as "Animal Name"
+FROM owners
+LEFT JOIN animals
+ON owners.id = animals.owner_id;
