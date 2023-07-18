@@ -93,3 +93,7 @@ GROUP BY neutered;
 /* What is the minimum and maximum weight of each type of animal? */
 SELECT species as "Species", MIN(weight_kg) as "Min Weight", MAX(weight_kg)as
 "Max Weight" FROM animals GROUP BY species;
+
+/* What is the average number of escape attempts per animal type of those born between 1990 and 2000? */
+SELECT species as "Species", AVG(escape_attempts) FROM animals WHERE date_of_birth
+ BETWEEN '19900101' and '20000101' GROUP BY species;
