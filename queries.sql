@@ -69,3 +69,6 @@ UPDATE animals SET weigth_kg = weigth_kg * -1;
 /* Rollback to the savepoint */
 ROLLBACK;
 
+BEGIN;
+/* Commit transaction */
+COMMIT;
