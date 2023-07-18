@@ -75,3 +75,7 @@ UPDATE animals SET weigth_kg = weigth_kg * -1 WHERE weigth_kg < 0;
 
 /* Commit transaction */
 COMMIT;
+SELECT   * FROM animals;
+
+/* How many animals are there? */
+SELECT  COUNT(*) as "Animals" FROM animals;
