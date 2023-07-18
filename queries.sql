@@ -53,3 +53,9 @@ SELECT   * FROM animals;
 BEGIN;
 DELETE FROM animals;
 ROLLBACK;
+
+/* After the rollback verify if all records in the animals table still exists */
+SELECT   * FROM animals;
+
+/* Delete all animals born after Jan 1st, 2022. */
+DELETE FROM animals WHERE date_of_birth > '20220101';
