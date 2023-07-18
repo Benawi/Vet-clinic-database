@@ -125,3 +125,9 @@ FROM species
 JOIN animals
 ON species.id = animals.species_id
 GROUP BY species.name;
+
+/* List all Digimon owned by Jennifer Orwell. */
+SELECT animals.name as "Animal Name", owners.full_name as "Owner" FROM animals 
+JOIN owners
+ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Jennifer Orwell';
