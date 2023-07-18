@@ -70,5 +70,8 @@ UPDATE animals SET weigth_kg = weigth_kg * -1;
 ROLLBACK;
 
 BEGIN;
+/* Update all animals' weights that are negative to be their weight multiplied by -1. */
+UPDATE animals SET weigth_kg = weigth_kg * -1 WHERE weigth_kg < 0;
+
 /* Commit transaction */
 COMMIT;
