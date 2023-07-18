@@ -63,3 +63,7 @@ DELETE FROM animals WHERE date_of_birth > '20220101';
 /* Create a savepoint for the transaction. */
 BEGIN;
 SAVEPOINT SP1;
+
+/* Update all animals' weight to be their weight multiplied by -1. */
+UPDATE animals SET weigth_kg = weigth_kg * -1;
+
