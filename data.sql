@@ -43,3 +43,15 @@ SET species_id = (
 )
 WHERE name LIKE '%mon';
 COMMIT;
+
+/* Modify your inserted animals so it includes the species_id value:
+If the name not ends in "mon" it will be Digimon */
+BEGIN;
+UPDATE animals
+SET species_id = (
+  SELECT id FROM species
+  WHERE name IN ('%mon1%', '%mon2%')  
+)
+WHERE name NOT LIKE '%mon';
+COMMIT;
+
