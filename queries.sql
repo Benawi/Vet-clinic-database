@@ -44,3 +44,7 @@ UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
 
 /* Verify that changes were made. */
 SELECT  * FROM animals;
+
+/*Commit the transaction. and Verify that changes persist after commit.  */
+COMMIT;
+SELECT   * FROM animals;
