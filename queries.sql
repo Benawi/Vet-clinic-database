@@ -243,3 +243,18 @@ FULL JOIN species
 ON specializations.specie_id = species.id
 WHERE specializations.specie_id != animals.species_id and vets.name != 'Stephanie Mendez' or vets.name = 'Maisy Smith';
 
+
+/*  What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+ */
+SELECT count(sp.name) AS "How many calls?",
+		sp.name as "Specialty Suggestion:",
+		ve.name as "Vet Looking for specialty"
+FROM animals an
+JOIN owners AS ow ON (an.owner_id = ow.id)
+JOIN species AS sp ON (sp.id = an.species_id)
+JOIN visits AS vi ON (vi.animal_id = an.id)
+JOIN vets AS ve ON (ve.id = vi.vet_id)
+left join specializations as spec on (spec.vet_id = ve.id)
+WHERE spec.vet_id is null
+group by sp.name, ve.name
+limit 1;
