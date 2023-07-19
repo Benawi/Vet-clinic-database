@@ -44,3 +44,49 @@ ADD  CONSTRAINT fk_owners
 FOREIGN KEY(owner_id)
 REFERENCES owners(id)
 ON DELETE CASCADE;
+
+/* ==============================================================
+   ||Vet clinic database project: add "join table" for visits  ||
+   ============================================================== */
+   
+/* Create a table named vets */
+CREATE TABLE vets(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name varchar(80) NOT NULL,
+  age INT NOT NULL,
+  date_of_graduation date NOT NULL,
+  PRIMARY KEY(id)
+);
+
+/* Create a "join table" called specializations */
+CREATE TABLE specializations(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  specie_id INT NOT NULL,
+  vet_id INT NOT NULL,
+  CONSTRAINT fk_species
+    FOREIGN KEY(specie_id)
+      REFERENCES species(id)
+        ON DELETE CASCADE,
+  CONSTRAINT fk_vets
+    FOREIGN KEY(vet_id)
+      REFERENCES vets(id)
+        ON DELETE CASCADE,
+  PRIMARY KEY(id)
+);
+
+/* Create a "join table" called visits  */
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT NOT NULL,
+  vet_id INT NOT NULL,
+  date_of_visit date NOT NULL,
+  CONSTRAINT fk_animals
+    FOREIGN KEY(animal_id)
+      REFERENCES animals(id)
+        ON DELETE CASCADE,
+  CONSTRAINT fk_vets
+    FOREIGN KEY(vet_id)
+      REFERENCES vets(id)
+        ON DELETE CASCADE,
+  PRIMARY KEY(id)
+);

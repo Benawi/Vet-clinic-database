@@ -73,6 +73,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - List owners and their animals
   - Count animals per species
   - Other analytics like most owned animals
+- [] Applay types of relationships between tables
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -83,7 +84,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
 
 ## 🔭 Future Features <a name="future-features"></a>
-- Add "join table" for visits.
 - Database performance audit.💯
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
