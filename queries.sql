@@ -171,3 +171,11 @@ JOIN vets
 ON visits.vet_id = vets.id
 WHERE vets.name = 'Stephanie Mendez'
 GROUP BY animals.name, vets.name;
+
+/*  List all vets and their specialties, including vets with no specialties. */
+SELECT vets.name as "Veterinaries", species.name as "Specialty"
+FROM vets
+FULL JOIN specializations
+ON vets.id = specializations.vet_id
+FULL JOIN species
+ON specializations.specie_id = species.id;
