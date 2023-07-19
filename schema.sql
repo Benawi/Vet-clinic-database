@@ -54,4 +54,18 @@ CREATE TABLE vets(
   PRIMARY KEY(id)
 );
 
-
+/* Create a "join table" called specializations */
+CREATE TABLE specializations(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  specie_id INT NOT NULL,
+  vet_id INT NOT NULL,
+  CONSTRAINT fk_species
+    FOREIGN KEY(specie_id)
+      REFERENCES species(id)
+        ON DELETE CASCADE,
+  CONSTRAINT fk_vets
+    FOREIGN KEY(vet_id)
+      REFERENCES vets(id)
+        ON DELETE CASCADE,
+  PRIMARY KEY(id)
+);
