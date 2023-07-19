@@ -69,3 +69,20 @@ CREATE TABLE specializations(
         ON DELETE CASCADE,
   PRIMARY KEY(id)
 );
+
+/* Create a "join table" called visits  */
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT NOT NULL,
+  vet_id INT NOT NULL,
+  date_of_visit date NOT NULL,
+  CONSTRAINT fk_animals
+    FOREIGN KEY(animal_id)
+      REFERENCES animals(id)
+        ON DELETE CASCADE,
+  CONSTRAINT fk_vets
+    FOREIGN KEY(vet_id)
+      REFERENCES vets(id)
+        ON DELETE CASCADE,
+  PRIMARY KEY(id)
+);
