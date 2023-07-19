@@ -198,7 +198,7 @@ ON animals.id = visits.animal_id
 GROUP BY animals.name
 ORDER BY "Number of Visits" DESC LIMIT 1;
 
-/* Who was Maisy Smith's first visit? */
+/* -- Who was Maisy Smith's first visit? */
 
 SELECT vets.name as "Veterinary", animals.name as "Animal",
 visits.date_of_visit as "First Visit"
@@ -208,3 +208,23 @@ ON vets.id = visits.vet_id
 JOIN animals ON visits.animal_id = animals.id
 WHERE vets.name = 'Maisy Smith'
 ORDER BY visits.date_of_visit ASC LIMIT 1;
+
+/* - Details for most recent visit: animal information, vet information, and date of visit.
+ */
+SELECT 
+  animals.id as "Animal Id",
+  animals.name as "Animal",
+  animals.date_of_birth as "Date of Birth",
+  animals.escape_attempts as "Escape Attempts",
+  animals.neutered as "Animal is Neutered?",
+  animals.weigth_kg as "Animal Weight", 
+  vets.id as "Vet Id",
+  vets.name as "Veterinary",
+  vets.age as "Vet Age",
+  vets.date_of_graduation as "Vet Graduation Date", 
+  visits.date_of_visit as "Date of Visit"
+FROM vets
+JOIN visits
+ON vets.id = visits.vet_id
+JOIN animals ON visits.animal_id = animals.id
+ORDER BY visits.date_of_visit DESC LIMIT 1;
