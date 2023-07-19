@@ -179,3 +179,12 @@ FULL JOIN specializations
 ON vets.id = specializations.vet_id
 FULL JOIN species
 ON specializations.specie_id = species.id;
+
+ /* List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.*/
+SELECT animals.name as "Animals", vets.name as "Veterinary", visits.date_of_visit as "Visit Date"
+FROM animals
+JOIN visits
+ON animals.id = visits.animal_id
+JOIN vets 
+ON visits.vet_id = vets.id
+WHERE vets.name = 'Stephanie Mendez' AND date_of_visit BETWEEN '20200401' AND '20200830'; 
