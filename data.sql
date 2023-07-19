@@ -87,6 +87,11 @@ SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
 WHERE name = 'Angemon'  OR name = 'Boarmon';
 COMMIT;
 
+
+/* ==============================================================
+   ||Vet clinic database project: add "join table" for visits  ||
+   ============================================================== */
+   
 /* Insert the following data for vets */
 INSERT INTO vets(name, age, date_of_graduation) 
 VALUES ('William Tatcher', 45, '20000423'),

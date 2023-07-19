@@ -45,6 +45,10 @@ FOREIGN KEY(owner_id)
 REFERENCES owners(id)
 ON DELETE CASCADE;
 
+/* ==============================================================
+   ||Vet clinic database project: add "join table" for visits  ||
+   ============================================================== */
+   
 /* Create a table named vets */
 CREATE TABLE vets(
   id INT GENERATED ALWAYS AS IDENTITY,

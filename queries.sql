@@ -146,3 +146,18 @@ JOIN animals
 ON owners.id = animals.owner_id
 GROUP BY owners.full_name
 ORDER BY "Number of Animals" DESC LIMIT 1;
+
+
+/* ==============================================================
+   ||Vet clinic database project: add "join table" for visits  ||
+   ============================================================== */
+/* 
+    Who was the last animal seen by William Tatcher? */
+SELECT vets.name as "Veterinary", animals.name as "Animal",
+visits.date_of_visit as "Last Visit"
+FROM vets
+JOIN visits
+ON vets.id = visits.vet_id
+JOIN animals ON visits.animal_id = animals.id
+WHERE vets.name = 'William Tatcher'
+ORDER BY visits.date_of_visit DESC LIMIT 1;
