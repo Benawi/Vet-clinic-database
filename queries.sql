@@ -228,3 +228,18 @@ JOIN visits
 ON vets.id = visits.vet_id
 JOIN animals ON visits.animal_id = animals.id
 ORDER BY visits.date_of_visit DESC LIMIT 1;
+
+/*  How many visits were with a vet that did not specialize in that animal's species? */
+
+SELECT COUNT(visits.date_of_visit) as "Visits were the vet was not specialized in the animal"
+FROM animals
+LEFT JOIN visits
+ON animals.id = visits.animal_id
+JOIN vets 
+ON visits.vet_id = vets.id
+FULL JOIN specializations 
+ON vets.id = specializations.vet_id
+FULL JOIN species 
+ON specializations.specie_id = species.id
+WHERE specializations.specie_id != animals.species_id and vets.name != 'Stephanie Mendez' or vets.name = 'Maisy Smith';
+
