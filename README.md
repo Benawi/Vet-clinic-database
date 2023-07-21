@@ -63,7 +63,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [x] Creates a savepoint within a transaction
 - [x] Allows rolling back to a mid-transaction savepoint
 - [x] Basic aggregation queries like COUNT, AVG, MIN, MAX functions
-- [x] Conditional filtering WHERE clause to filter result setg ,group results by a column like animal type and apply aggregates per group
+- [x] Conditional filtering WHERE clause to filter result setg,group results by a column like animal type and apply aggregates per group
 - [x] `owners` table to store owner information
 - [x] `species` table to store animal species
 - [x] `animals` table to store animal data, with foreign keys linking to owners and species
@@ -73,7 +73,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - List owners and their animals
   - Count animals per species
   - Other analytics like most owned animals
-- [] Applay types of relationships between tables
+- [x] Apply types of relationships between tables
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -101,7 +101,7 @@ Give me ⭐️ If you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I  would like to thank the Microverse program for providing us with this great chance.
+- I  thank the Microverse program for giving us this great chance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
