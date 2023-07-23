@@ -62,8 +62,8 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - [x] Demonstrates deleting subsets of rows
 - [x] Creates a savepoint within a transaction
 - [x] Allows rolling back to a mid-transaction savepoint
-- [x] Basic aggregation queries like COUNT, AVG, MIN, MAX functions
-- [x] Conditional filtering WHERE clause to filter result setg,group results by a column like animal type and apply aggregates per group
+- [x] Basic aggregation queries like COUNT, AVG, MIN, and MAX functions
+- [x] Conditional filtering WHERE clause to filter result setg, group results by a column like animal type and apply aggregates per group
 - [x] `owners` table to store owner information
 - [x] `species` table to store animal species
 - [x] `animals` table to store animal data, with foreign keys linking to owners and species
