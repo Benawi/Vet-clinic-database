@@ -74,6 +74,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - Count animals per species
   - Other analytics like most owned animals
 - [x] Apply types of relationships between tables
+- [x] Database performance audit
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -82,6 +83,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [Benawi](https://github.com/Benawi)
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
+### 👤 Bwambale
+- GitHub: [Benawi](https://github.com/wolterbwamabale)
+- Linkdin: [Bwambale](https://www.linkedin.com/in/Bwambale-benny-wolter/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 - Database performance audit.💯
