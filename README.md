@@ -74,6 +74,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - Count animals per species
   - Other analytics like most owned animals
 - [x] Apply types of relationships between tables
+- [x] Database performance audit
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
