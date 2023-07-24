@@ -91,5 +91,5 @@ CREATE TABLE visits(
   PRIMARY KEY(id)
 );
 
--- Add an email column to your owners table
+-- Add an email column to owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
