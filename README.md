@@ -82,6 +82,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 - GitHub: [Benawi](https://github.com/Benawi)
 - Linkdin: [Habtamu](https://www.linkedin.com/in/habtamualemayehu/)
+### 👤 Bwambale
+- GitHub: [Benawi](https://github.com/wolterbwamabale)
+- Linkdin: [Habtamu](https://www.linkedin.com/in/Bwambale-benny-wolter/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 - Database performance audit.💯
