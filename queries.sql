@@ -258,3 +258,5 @@ left join specializations as spec on (spec.vet_id = ve.id)
 WHERE spec.vet_id is null
 group by sp.name, ve.name
 limit 1;
+
+explain analyze SELECT * FROM visits where vet_id = 2;
