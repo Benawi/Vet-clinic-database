@@ -95,3 +95,7 @@ CREATE TABLE visits(
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 ALTER TABLE owners ALTER COLUMN age DROP NOT NULL;
+/* create index to optimaze the performance of database */
+CREATE INDEX animals_order ON visits (animal_id ASC);
+CREATE INDEX vets_order ON visits (vet_id ASC);
+CREATE INDEX owners_email_asc ON owners (email ASC);
